@@ -42,6 +42,9 @@ class Post(models.Model):
     text = models.TextField()
     rating = models.IntegerField(default=0)
 
+    def __str__(self):
+        return f'{self.headline.title()}: {self.text[:20]}'
+
     def preview(self):
         return self.text[:124] + '...'
 

@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Post
+{% endblock title %}
+
+{% block content %}
+<h1>{{ post.headline }}</h1>
+<h2>{{ post.some_datatime|date:'d M Y' }}</h2>
+<h3>{{ post.author }}</h3>
+<h3>{{ post.post_typ }}</h3>
+<h3>{{ post.category }}</h3>
+<h3>{{ post.rating }}</h3>
+{% endblock content %}
