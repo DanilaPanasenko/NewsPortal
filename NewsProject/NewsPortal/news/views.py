@@ -6,10 +6,9 @@ from .models import Post
 
 class PostsList(ListView):
     model = Post
-    ordering = 'headline'
+    ordering = '-some_datatime'
     template_name = 'flatpages/posts.html'
     context_object_name = 'posts'
-    order_by = '-some_datatime'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
